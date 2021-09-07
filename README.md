@@ -68,9 +68,9 @@ export const initialState = {
 * [x] Remove or comment out the `addOne` event handler from the 1 button.
 * [x] Create an eventhandler that takes in a number as an argument and dispatches `applyNumber` with it.
 * [x] Attach that eventhandler to the 1 button's `onClick` method, passing in a 1 as an argument. (Remember that we pass a function into that click handler, not the execution of a function)
-* [ ] **Test** that clicking the one button still adds one to the total display on the browser.
-* [ ] Connect all other number buttons to your new event handler, passing in their respective values.
-* [ ] **Test** that clicking on each button will add its respective value to the total display.
+* [x] **Test** that clicking the one button still adds one to the total display on the browser.
+* [x] Connect all other number buttons to your new event handler, passing in their respective values.
+* [x] **Test** that clicking on each button will add its respective value to the total display.
 
 #### Create and connect an action creator.
 > *Right now our application only adds. Let's change that and give you practice creating and connecting action creators of your own!*

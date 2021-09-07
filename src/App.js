@@ -6,7 +6,7 @@ import './App.css';
 import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 import { ConsoleWriter } from 'istanbul-lib-report';
-import { addOne, applyNumber } from './actions'
+import { addOne, applyNumber, changeOperation } from './actions'
 
 
 function App() {
@@ -21,6 +21,9 @@ function App() {
     dispatch(applyNumber(number))
   }  
 
+  const operationHandler = (operation) => {
+    dispatch(changeOperation(operation))
+  }
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -62,9 +65,9 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton  value={"+"}/>
-              <CalcButton value={"*"}/>
-              <CalcButton value={"-"}/>
+              <CalcButton onClick={() => operationHandler('+')} value={"+"}/>
+              <CalcButton onClick={() => operationHandler('*')} value={"*"}/>
+              <CalcButton onClick={() => operationHandler('-')} value={"-"}/>
             </div>
 
             <div className="row ce_button">
