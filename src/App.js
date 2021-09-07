@@ -6,7 +6,7 @@ import './App.css';
 import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 import { ConsoleWriter } from 'istanbul-lib-report';
-import { addOne, applyNumber, changeOperation } from './actions'
+import { addOne, applyNumber, changeOperation, clearDisplay } from './actions'
 
 
 function App() {
@@ -23,6 +23,10 @@ function App() {
 
   const operationHandler = (operation) => {
     dispatch(changeOperation(operation))
+  }
+
+  const clearDisplayHandler = () => {
+    dispatch(clearDisplay())
   }
   return (
     <div className="App">
@@ -71,7 +75,7 @@ function App() {
             </div>
 
             <div className="row ce_button">
-              <CalcButton value={"CE"}/>
+              <CalcButton onClick={clearDisplayHandler} value={"CE"}/>
             </div>
 
           </form>
